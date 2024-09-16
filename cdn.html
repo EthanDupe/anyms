@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        input, button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Dynamic Content Update</h1>
+    <p id="displayText">This is the initial content.</p>
+    <input type="text" id="userInput" placeholder="Enter new text here">
+    <button onclick="updateText()">Update Text</button>
+
+    <script>
+        function updateText() {
+            // Get the value from the input field
+            var newText = document.getElementById('userInput').value;
+            // Set the new text to the paragraph
+            document.getElementById('displayText').innerText = newText;
+            // Clear the input field
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
